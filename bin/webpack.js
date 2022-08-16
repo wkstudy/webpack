@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-
+// 最终的结果是加载webpack-cli的bin文件
 /**
  * @param {string} command process to run
  * @param {string[]} args command line arguments
@@ -66,6 +66,7 @@ const runCli = cli => {
 	// eslint-disable-next-line node/no-missing-require
 	const pkg = require(pkgPath);
 	// eslint-disable-next-line node/no-missing-require
+	// 最终的结果
 	require(path.resolve(path.dirname(pkgPath), pkg.bin[cli.binName]));
 };
 
